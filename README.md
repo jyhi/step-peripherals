@@ -3,9 +3,9 @@ SPDX-FileCopyrightText: 2021 Junde Yhi <junde@yhi.moe>
 SPDX-License-Identifier: CC0-1.0
 -->
 
-# Step FPGA Board Peripheral
+# Step FPGA Board Peripheral Export
 
-This simple SystemVerilog module connects all on-board peripherals on the [STEP-MAX10][step-max10] FPGA development board to its external GPIO pins.
+This simple SystemVerilog module connects all on-board peripherals on the [STEP-MAX10][step-max10] FPGA development board to its external GPIO pins, exposing them to external users.
 
 Theoretically this can also be used on the [STEP-MXO2][step-mxo2] variant, but it's not tested yet.
 
@@ -13,6 +13,9 @@ Theoretically this can also be used on the [STEP-MXO2][step-mxo2] variant, but i
 [step-mxo2]: http://www.stepfpga.org/step-mxo2-development-board/
 
 ## Pinout Definition
+
+- All input ports are configured as tri-state input with weak pull-ups; turn them on by grounding or outputting a low level to the pins.
+- All output ports (i.e. switches and buttons / keys) are active high.
 
 |35 - 34|33|32|31|30|29 - 22|21 - 18|
 |-|-|-|-|-|-|-|
