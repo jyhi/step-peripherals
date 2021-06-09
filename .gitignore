@@ -1,0 +1,16 @@
+# Ignore all Quartus Prime generated files and folders (except project files)
+# SPDX-FileCopyrightText: 2021 Junde Yhi <junde@yhi.moe>
+# SPDX-License-Identifier: CC0-1.0
+
+.qsys_edit/
+db/
+incremental_db/
+output_files/
+simulation/
+timing/
+testbench/
+
+*.bak
+*.txt
+*.rpt
+*.qws
